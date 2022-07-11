@@ -1,0 +1,35 @@
+.burton {
+  display: flex;
+}
+
+.burton__content {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+
+.burton__logo-img {
+  max-width: 300px;
+}
+
+.burton__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 92px;
+  line-height: 127%;
+  /* or 117px */
+
+  letter-spacing: 0.015em;
+
+  color: var(--theme-main-color);
+  max-width: 975px;
+}
+
+.burton__description {
+  border-right: 3px solid var(--theme-main-color);
+  border-bottom: 3px solid var(--theme-main-color);
+  max-width: 805px;
+
+  display: flex;
+  flex-direction: column;
+}

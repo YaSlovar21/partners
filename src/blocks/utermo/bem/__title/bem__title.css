@@ -1,0 +1,5 @@
+.bem__subtitle {
+  font-size: var(--h3-size);
+  color: var(--theme-white-color);
+  margin: 0
+}

@@ -1,0 +1,14 @@
+.mini-title-intro {
+  color: var(--theme-white-color);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  font-weight: 200;
+  margin: 0 20px 0 0;
+  max-width: 75px;
+}
+
+.mini-title-intro__span {
+  font-size: 48px;
+  font-weight: 700;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link href="<%= canonicalURL %>"  rel="canonical" />
+</head>
+<body class="page">
+
+  <main>
+    <header class="burton">
+      <div class="burton__content">
+        <img class="burton__logo-img"  src="<%=require('./images/partners/header-logo.svg')%>" alt="Лого">
+        <h1 class="burton__title">Срочно запустить интернет-магазин?</h1>
+        <div class="burton__description">
+          <ul class="bem__list">
+            <li>
+              <span>Срок</span>
+              <p>7 дней</p>
+            </li>
+            <li>
+              <span>Цена</span>
+              <p><span>От</span> 9500 ₽</p>
+            </li>
+          </ul>
+
+          <a class="bem__link bem__link_arrowup" style="padding: 30px 10px; background-color:var(--bg-color); position: relative; top: 50%">Подробнее</a>
+        </div>
+      </div>
+      <img src="<%=require('./images/partners/freelancer.svg')%>" alt="Лого">
+    </header>
+  </main>
+
+  <!--FOOTER-->
+  <%= require('html-loader!./insets/asides/inner-footer.html').default %>
+</body>
+</html>

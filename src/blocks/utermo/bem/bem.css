@@ -1,0 +1,23 @@
+:root {
+  --bem-padding-buttons: 20px;
+  --theme-white-color: #e8e8e8;
+  /*--theme-white-color: #DBDBDB;*/
+  --theme-lightgray-color: #cbcbcb;
+  --theme-gray-color: #a7a7a7;
+  --theme-dark-gray-color: #323232;
+  --theme-main-color: #EE406D;
+  --main-equivalent-color: #FF0D9E;
+
+  --aside-width: 150px;
+
+  --bg-color: #222222;
+  --bg-darker-color: #141414;
+
+  --h2-size: 32px;
+  --h3-size: 20px;
+  /*--p-size-comment: 20px;*/
+  --p-size: 20px;
+
+  --dynamic-grid-text-color: #1f1f1f;
+  --dynamic-grid-bg-color: #696969;
+}

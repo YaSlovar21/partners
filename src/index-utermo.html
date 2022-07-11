@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link href="<%= canonicalURL %>"  rel="canonical" />
+</head>
+<body class="page">
+  <aside class="aside">
+    <%= require('html-loader!./insets/asides/in-aside.html').default %>
+  </aside>
+  <header class="header">
+    <a href="/" class="header__logo-link-container">
+      <img class="header__logo-img"  src="<%=require('./images/svg-elems/u-flogo.svg')%>" alt="Лого Ютермо">
+    </a>
+    <div class="header__nav-side">
+      <%= require('html-loader!./insets/asides/nav-page.html').default %>
+    </div>
+  </header>
+  <main>
+    <section class="mainpage-header">
+      <h1 class="bem__title">Бтп Ютермо</h1>
+    </section>
+
+    <section class="mainpage-btp">
+      <div class="mainpage-btp__content uwrapper">
+        <div class="mainpage-btp__desc">
+          <h2 class="section-title">Блочные тепловые пункты</h2>
+          <p class="bem__paragraph">Мы - производитель и изготавливаем тепловые пункты в заводских условиях с контролем
+            качества на каждом этапе.</p>
+          <h3 class="section-subtitle">Для Вас</h3>
+          <ul class="bem__list">
+            <li>Оперативный подбор БТП <span class="span-color-brand">(1-2 дня)</span> </li>
+            <li>Индивидуальный подход</li>
+            <li>Разработка технической документации</li>
+          </ul>
+          <h3 class="section-subtitle">P.S.</h3>
+          <ul class="bem__list">
+            <li>Доставим и разгрузим собственным транспортом</li>
+            <li>Водитель с отличным чувством юмора</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mainpage-pto">
+      <div class="mainpage-pto__content uwrapper">
+        <div class="mainpage-pto__desc">
+          <h2 class="section-title mainpage-pto__title section-title_underline_right">Пластинчатые теплообменники</h2>
+          <ul class="bem__list" style="margin-top: 40px; max-width: 600px;">
+            <li class="bem__list-item">Собственное производство пластин и уплотнений.</li>
+            <li class="bem__list-item">Комплектация ответными фланцами.</li>
+            <li class="bem__list-item">Изготовление направляющих из нержавеющей стали.</li>
+            <li class="bem__list-item">100% выходной контроль качества.</li>
+            <li class="bem__list-item">Производство 3-5ти секционных теплообменников для процессов пастеризации на пищевых предприятиях.</li>
+            <li class="bem__list-item">Доставка до ближайшего к клиенту терминала транспортной компании включена в стоимость.</li>
+            <li class="bem__list-item">Собственная программа подбора.</li>
+            <li class="bem__list-item">Скорость подбора от 10 минут до 2 часов.</li>
+            <li class="bem__list-item">Покраска плит в оранжевый цвет для поднятия настроения.</li>
+          </ul>
+        </div>
+        <div class="mainpage-pto__image-container">
+          <img class="mainpage-pto__image" src="<%=require('./images/ti45_new.png')%>" alt="Теплообменники Ютермо">
+        </div>
+      </div>
+    </section>
+
+    <section class="mainpage-company" style="position: relative; min-height: 900px; background-color: var(--bg-darker-color);">
+      <div class="mainpage-company__content">
+        <div class="uwrapper" style="padding: 50px 0;">
+          <h2 class="section-title">О компании</h2>
+          <div style="max-width: 600px;">
+          <p class="bem__paragraph">Наша компания является производителем блочных тепловых пунктов под маркой Ютермо.</p>
+            <ul class="bem__list" style="margin-top: 40px;">
+              <li class="bem__list-item">Каждый блочный тепловой пункт подбирается индивидуально согласно данных, предоставленных проектировщиком или
+                заказчиком.</li>
+              <li class="bem__list-item">Разрабатывается принципиальная тепловая схема теплового пункта, подбирается оборудование, показывается размещение
+                блоков на плане помещения.</li>
+              <li class="bem__list-item">Конструкторами создаётся 3D модели блоков БТП, исходя из размеров помещения и дверных проёмов.</li>
+              <li class="bem__list-item">По этим моделям на производстве изготавливаются готовые блоки.</li>
+              <li class="bem__list-item">Каждый БТП комплектуется шкафами управления.</li>
+            </ul>
+          </div>
+        </div>
+        <img src="<%=require('./images/mainpage-about.png')%>">
+      </div>
+        <img src="<%=require('./images/svg-elems/mainpage-svg-section.svg')%>" style="position: absolute; top: 0; left: 0;">
+    </section>
+
+    <section class="mainpage-reference uwrapper" style="padding: 10%;">
+      <%=require('./insets/schemes/svg-schemes/russia-map.svg')%>
+    </section>
+
+  </main>
+
+  <!--FOOTER-->
+  <%= require('html-loader!./insets/asides/inner-footer.html').default %>
+
+  <!--Шаблон карточки проекта-->
+  <template id="project-template">
+    <div class="projects__item">
+      <img class="projects__image" alt="Здесь будет фото проекта" src="<%=require('./images/svg-elems/preloader.gif')%>">
+      <p class="projects__item-description">Котельная в квартале 34, г. Уфа, жилой район «Затон-Восточный»</p>
+    </div>
+  </template>
+
+  <!--Шаблон элемента партнера на карте-->
+  <template id="partner-item-template">
+    <li class="map__list-item" data-html="<b>ООО «Интерсервис»</b><br> Тел.: 8-914-130-30-30<br>">Чита</li>
+  </template>
+</body>
+</html>
